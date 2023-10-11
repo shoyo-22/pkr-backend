@@ -19,3 +19,7 @@ app.add_middleware(
 )
 
 app.include_router(tournament.router)
+
+@app.get('/', tags=['Root'])
+def index():
+    return {'project': 'pkr-backend'}
